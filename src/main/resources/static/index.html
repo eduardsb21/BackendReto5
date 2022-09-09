@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Ejemplo de OAuth2 con Spring</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <base href="/" />
+        <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/webjars/bootstrap/js//bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>#MisionTIC 2022</h1>
+
+        <div class="noautenticado">
+            <p>Para Iniciar Sesion con GitHub:</p>
+            <a href="/oauth2/authorization/github">Logear Git</a>
+        </div>
+        <div class="autenticado" style="display:none">
+            <p>Autenticado:<span id="user"></span></p>
+        </div>
+        <script type="text/javascript">
+            $.get("/user", function (data) {
+                $("#user").html(data.name);
+                $(".noautenticado").hide();
+                $(".autenticado").show();
+            });
+
+
+        </script>
+    </body>
+</html>

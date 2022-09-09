@@ -1,0 +1,11 @@
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.h2.console.enabled=false
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create-drop
+logging.level.org.hibernate.sql=debug
+spring.security.oauth2.client.registration.github.clientId= 8e7dee50ca8c3747173b
+spring.security.oauth2.client.registration.github.clientSecret=8f2c556c826ed82ccab0e12b51fed5dce1d5f3a4
+server.port=8080
